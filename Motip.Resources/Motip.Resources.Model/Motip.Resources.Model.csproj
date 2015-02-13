@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{e5707676-d1a1-48c5-afb6-bec49a30603f}</ProjectGuid>
+    <ProjectGuid>{E5707676-D1A1-48C5-AFB6-BEC49A30603F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Motip.Resources.Model</RootNamespace>
@@ -37,7 +37,10 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Enums\PlaceType.cs" />
+    <Compile Include="PlaceData.cs" />
+    <Compile Include="Enums\GenderType.cs" />
+    <Compile Include="UserData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -48,5 +51,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>
