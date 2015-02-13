@@ -191,7 +191,9 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
-    <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="DataObjects\Place.cs" />
+    <Compile Include="DataObjects\User.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +219,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\mobile%24motip-ams.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Motip.Resources\Motip.Resources.Model\Motip.Resources.Model.csproj">
+      <Project>{e5707676-d1a1-48c5-afb6-bec49a30603f}</Project>
+      <Name>Motip.Resources.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
