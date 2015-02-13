@@ -1,2 +1,2 @@
 # IdeaToStores
-De l'idée aux Stores
+From idea to stores
