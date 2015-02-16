@@ -37,6 +37,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IAddress.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="Enums\PlaceType.cs" />
     <Compile Include="PlaceData.cs" />

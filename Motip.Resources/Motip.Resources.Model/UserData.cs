@@ -1,9 +1,10 @@
 ﻿using System;
 using Motip.Resources.Model.Enums;
+using Motip.Resources.Model.Interfaces;
 
 namespace Motip.Resources.Model
 {
-    public abstract class UserData
+    public abstract class UserData : IAddress
     {
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
