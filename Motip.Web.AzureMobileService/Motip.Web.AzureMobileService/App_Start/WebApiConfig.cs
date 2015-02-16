@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web.Http;
-using Motip.Web.AzureMobileService.DataObjects;
-using Motip.Web.AzureMobileService.Models;
 using Microsoft.WindowsAzure.Mobile.Service;
 using Motip.Web.AzureMobileService.Migrations;
+using Motip.Web.AzureMobileService.Models;
 
 namespace Motip.Web.AzureMobileService
 {
@@ -49,21 +46,10 @@ namespace Motip.Web.AzureMobileService
 
     public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
     {
-        //protected override void Seed(MobileServiceContext context)
-        //{
-        //    List<TodoItem> todoItems = new List<TodoItem>
-        //    {
-        //        new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-        //        new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
-        //    };
-
-        //    foreach (TodoItem todoItem in todoItems)
-        //    {
-        //        context.Set<TodoItem>().Add(todoItem);
-        //    }
-
-        //    base.Seed(context);
-        //}
+        protected override void Seed(MobileServiceContext context)
+        {
+            base.Seed(context);
+        }
     }
 }
 

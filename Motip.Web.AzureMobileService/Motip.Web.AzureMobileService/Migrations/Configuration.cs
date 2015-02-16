@@ -1,18 +1,16 @@
+using System.Data.Entity.Migrations;
+using Motip.Web.AzureMobileService.Models;
+
 namespace Motip.Web.AzureMobileService.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<Motip.Web.AzureMobileService.Models.MobileServiceContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MobileServiceContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Motip.Web.AzureMobileService.Models.MobileServiceContext context)
+        protected override void Seed(MobileServiceContext context)
         {
             //  This method will be called after migrating to the latest version.
 

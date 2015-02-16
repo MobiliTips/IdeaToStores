@@ -190,9 +190,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="Controllers\PlaceController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataObjects\Place.cs" />
     <Compile Include="DataObjects\User.cs" />
+    <Compile Include="Migrations\201502161600554_InitMiggration.cs" />
+    <Compile Include="Migrations\201502161600554_InitMiggration.Designer.cs">
+      <DependentUpon>201502161600554_InitMiggration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
@@ -225,6 +230,11 @@
       <Project>{e5707676-d1a1-48c5-afb6-bec49a30603f}</Project>
       <Name>Motip.Resources.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201502161600554_InitMiggration.resx">
+      <DependentUpon>201502161600554_InitMiggration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -21,18 +21,16 @@ namespace Motip.Web.AzureMobileService.Models
         // service name, set by the 'MS_MobileServiceName' AppSettings in the local 
         // Web.config, is the same as the service name when hosted in Azure.
 
-        private const string connectionStringName = "Name=MS_TableConnectionString";
+        private const string ConnectionStringName = "Name=MS_TableConnectionString";
 
         public MobileServiceContext()
-            : base(connectionStringName)
+            : base(ConnectionStringName)
         {
         }
-
-        public DbSet<TodoItem> TodoItems { get; set; }
-
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            string schema = ServiceSettingsDictionary.GetSchemaName();
+            var schema = ServiceSettingsDictionary.GetSchemaName();
             if (!string.IsNullOrEmpty(schema))
             {
                 modelBuilder.HasDefaultSchema(schema);
@@ -42,6 +40,10 @@ namespace Motip.Web.AzureMobileService.Models
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
+
+        public DbSet<Place> Places { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 
 }
