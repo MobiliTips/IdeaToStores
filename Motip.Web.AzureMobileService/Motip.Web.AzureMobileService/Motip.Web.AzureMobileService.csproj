@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201502161600554_InitMiggration.Designer.cs">
       <DependentUpon>201502161600554_InitMiggration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503181619281_PlaceScoring.cs" />
+    <Compile Include="Migrations\201503181619281_PlaceScoring.Designer.cs">
+      <DependentUpon>201503181619281_PlaceScoring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
@@ -234,6 +238,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201502161600554_InitMiggration.resx">
       <DependentUpon>201502161600554_InitMiggration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503181619281_PlaceScoring.resx">
+      <DependentUpon>201503181619281_PlaceScoring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
